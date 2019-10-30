@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.MessagesActivity">
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Please Select the meetings you wish to attend:"/>
+
+    <ListView
+        android:id="@+id/invitationList"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_weight="0.5"
+        android:layout_below="@+id/title1"
+        android:layout_marginTop="10dp"
+        android:background="#90ee90"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/invitationList"
+        android:text="Here are the meetings you have chosen:"/>
+
+    <ListView
+        android:id="@+id/acceptedList"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_weight="0.5"
+        android:layout_below="@+id/title2"
+        android:background="#90ee90"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/acceptedList">
+
+        <Button
+            android:id="@+id/btnReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:layout_gravity="center_horizontal"
+            android:text="Reply"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="#008577">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home" />
+
+            <Button
+                android:id="@+id/btnMessages"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/ic_message"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+            <Button
+                android:id="@+id/btnAccount"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_profile" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
